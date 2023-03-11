@@ -2,7 +2,7 @@ package teste_kotlin_fundamental
 
 fun main(){
 
-    println(trocaLetras("alexandro"))
+    println(trocaLetras("america"))
 
 }
 
