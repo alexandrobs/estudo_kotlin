@@ -1,4 +1,4 @@
-package teste_kotlin_fundamental
+package teste_kotlin_fundamental.estudos_diversos_por_conteudo
 
 //type checks and cast
 class Testa08 {

@@ -1,4 +1,4 @@
-package teste_kotlin_fundamental
+package teste_kotlin_fundamental.estudos_diversos_por_conteudo
 
 //extension functions
 class Testa06 {
