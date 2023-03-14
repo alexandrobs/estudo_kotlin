@@ -1,7 +1,5 @@
 package teste_kotlin_fundamental
 
-import java.sql.DatabaseMetaData
-
 //extension functions
 class Testa06 {
 
