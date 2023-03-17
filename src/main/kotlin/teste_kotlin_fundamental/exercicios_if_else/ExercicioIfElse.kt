@@ -10,20 +10,18 @@ d. Estagiários recebem R$ 500.00
 */
 
 fun calculaBonus(cargo: String): Float {
-    if( cargo == "Gerente" ) {
-        return 2000f
-    }
-    if ( cargo == "Coordenador" ) {
-        return 1500f
-    }
-    if ( cargo == "Engenheiro de Software" ) {
-        return 1000f
-    }
-    if ( cargo == "Estagiário" ) {
-        return 500f
+    val bonus = if ( cargo == "Gerente" ) {
+        2000f
+    } else if ( cargo == "Coordenador" ) {
+        1500f
+    } else if ( cargo == "Engenheiro de Software" ) {
+        1000f
+    } else if ( cargo == "Estagiário" ) {
+        500f
     } else {
-        return 0f
+        0f
     }
+    return bonus
 }
 
 data class Empregado (
