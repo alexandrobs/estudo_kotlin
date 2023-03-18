@@ -10,7 +10,7 @@ d. Estagiários recebem R$ 500.00
 */
 
 fun calculaBonus(cargo: String): Float {
-    val bonus = if ( cargo == "Gerente" ) {
+    return if ( cargo == "Gerente" ) {
         2000f
     } else if ( cargo == "Coordenador" ) {
         1500f
@@ -21,7 +21,6 @@ fun calculaBonus(cargo: String): Float {
     } else {
         0f
     }
-    return bonus
 }
 
 data class Empregado (
@@ -57,5 +56,23 @@ fun main(){
     println(calculaBonus("Coordenador"))
     println(calculaBonus("Engenheiro de Software"))
     println(calculaBonus("Estagiário"))
+
+    val n = 100
+    when (n){
+        in 1..10 -> println("1..10")
+        in 10..100 -> println("10..100")
+    }
+
+    val bool = false
+    when (bool){
+        false -> println("is false")
+        true -> println("is true")
+    }
+
+    if (bool){
+        println("true")
+    } else {
+        println("false")
+    }
 
 }
