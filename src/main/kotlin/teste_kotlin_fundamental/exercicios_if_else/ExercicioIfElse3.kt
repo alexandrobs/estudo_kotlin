@@ -18,3 +18,11 @@ fun formaQuadrado(numberA: Int, numberB: Int): String{
 fun main(){
     readLine()?.let { readLine()?.let { it1 -> println(formaQuadrado(it.toInt(), it1.toInt())) } }
 }
+
+/*
+3. resposta:
+
+    "Segunda string"
+    "Terceira string"
+
+ */
