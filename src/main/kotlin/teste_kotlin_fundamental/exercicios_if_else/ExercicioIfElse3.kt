@@ -15,8 +15,29 @@ fun formaQuadrado(numberA: Int, numberB: Int): String{
 
 }
 
+fun quadrado() {
+    println("informe lado 1")
+    var lado1 = readLine()
+
+    println("informe lado 2")
+    var lado2 = readLine()
+
+    if (lado1 != null && lado1 != "" && lado2 != null && lado2 != "") {
+        val x = lado1.toInt()
+        val z = lado2.toInt()
+
+        if (x == z) {
+            println("e um quadrado")
+        } else {
+            println("nao e um quadrado")
+        }
+    }
+}
+
 fun main(){
     readLine()?.let { readLine()?.let { it1 -> println(formaQuadrado(it.toInt(), it1.toInt())) } }
+
+    quadrado()
 }
 
 /*
