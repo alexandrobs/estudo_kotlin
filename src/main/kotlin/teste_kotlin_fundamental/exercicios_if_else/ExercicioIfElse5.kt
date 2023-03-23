@@ -14,6 +14,39 @@ Caso o código não esteja nos padrões, negar a entrada. Mensagem:
 d. Caso todos os critérios sejam satisfeitos, exibir "Welcome :)".
  */
 
+fun portaria(){
+    print("qual sua idade?")
+    val idade = readLine()
+
+    if (idade != null && idade != ""){
+        if (idade.toInt() < 18){
+            println("negado, menores nao sao permitidos")
+            return
+        }
+    }
+
+    print("qual tipo de convite?")
+    var tipoConvite = readLine()
+
+    if (tipoConvite == "comum" || tipoConvite == "premium" || tipoConvite == "luxo"){
+        print("qual o codigo do convite?")
+        var codigo = readLine()
+
+        if (codigo != null && codigo != ""){
+            codigo = codigo.lowercase()
+            if (tipoConvite == "comum" && codigo.startsWith("xt")) {
+                println("Welcome :)")
+            } else if (tipoConvite == "premium" || tipoConvite == "luxo"
+                && codigo.startsWith("xl")){
+                println("Welcome :)")
+            } else {
+                println("negado. convite invalido")
+            }
+        }
+    } else {
+        println("negado. convite invalido")
+    }
+}
 
 fun main() {
 
@@ -53,4 +86,6 @@ fun main() {
             println("Negado. Menores de idade nao sao permitidos.")
         }
     }
+
+    portaria()
 }
