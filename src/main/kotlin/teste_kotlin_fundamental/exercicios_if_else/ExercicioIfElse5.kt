@@ -14,12 +14,12 @@ Caso o código não esteja nos padrões, negar a entrada. Mensagem:
 d. Caso todos os critérios sejam satisfeitos, exibir "Welcome :)".
  */
 
-fun portaria(){
+fun portaria() {
     print("qual sua idade?")
     val idade = readLine()
 
-    if (idade != null && idade != ""){
-        if (idade.toInt() < 18){
+    if (idade != null && idade != "") {
+        if (idade.toInt() < 18) {
             println("negado, menores nao sao permitidos")
             return
         }
@@ -28,16 +28,17 @@ fun portaria(){
     print("qual tipo de convite?")
     var tipoConvite = readLine()
 
-    if (tipoConvite == "comum" || tipoConvite == "premium" || tipoConvite == "luxo"){
+    if (tipoConvite == "comum" || tipoConvite == "premium" || tipoConvite == "luxo") {
         print("qual o codigo do convite?")
         var codigo = readLine()
 
-        if (codigo != null && codigo != ""){
+        if (codigo != null && codigo != "") {
             codigo = codigo.lowercase()
             if (tipoConvite == "comum" && codigo.startsWith("xt")) {
                 println("Welcome :)")
             } else if (tipoConvite == "premium" || tipoConvite == "luxo"
-                && codigo.startsWith("xl")){
+                && codigo.startsWith("xl")
+            ) {
                 println("Welcome :)")
             } else {
                 println("negado. convite invalido")
@@ -54,7 +55,7 @@ fun main() {
     var idade = readLine()?.toInt()
 
     if (idade != null) {
-        if (idade >= 18){
+        if (idade >= 18) {
             println("Idade Ok")
 
             var convites = setOf("comum", "premium", "luxo")
@@ -62,7 +63,7 @@ fun main() {
             println("Digite seu convite: ")
             var conviteApresentado = readLine()
 
-            if (convites.contains(conviteApresentado)){
+            if (convites.contains(conviteApresentado)) {
                 println("Convite OK")
 
                 var codigoConvite = setOf("XL", "XT")
@@ -70,7 +71,7 @@ fun main() {
                 println("Digite o codigo do convite: ")
                 var codigoConviteEntrada = readLine()
 
-                if(codigoConvite.contains(codigoConviteEntrada)){
+                if (codigoConvite.contains(codigoConviteEntrada)) {
                     println("Codigo OK")
                     println("WELCOME")
 
