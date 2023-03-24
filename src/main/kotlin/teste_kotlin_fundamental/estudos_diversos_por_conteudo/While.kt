@@ -1,6 +1,6 @@
 package teste_kotlin_fundamental.estudos_diversos_por_conteudo
 
-fun main(){
+fun main() {
     var i = 0
 
     while (i < 100) {
