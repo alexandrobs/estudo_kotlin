@@ -55,4 +55,8 @@ fun main() {
     }
 
     println()
+
+    for (y in 1..500) {
+        print("$y ")
+    }
 }
