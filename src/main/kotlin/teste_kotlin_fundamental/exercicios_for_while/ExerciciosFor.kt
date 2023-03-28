@@ -53,12 +53,10 @@ fun main() {
     println()
 
     //ex 4
-    var num = 0
     for (y in 1..500) {
-        print("$y ")
-        num = y
+        var num = y + (y - 1)
+        print("$num ")
     }
-        print(num )
 
     println()
 }
