@@ -44,7 +44,7 @@ fun main() {
     //ex 3
     for (z in 1..50) {
         if (z % 5 == 0 || z % 5 == 5) {
-            print(" ")
+            print("")
         } else {
             print("$z ")
         }
@@ -52,7 +52,13 @@ fun main() {
 
     println()
 
+    //ex 4
+    var num = 0
     for (y in 1..500) {
         print("$y ")
+        num = y
     }
+        print(num )
+
+    println()
 }
