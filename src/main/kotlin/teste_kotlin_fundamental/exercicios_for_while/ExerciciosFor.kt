@@ -23,10 +23,6 @@ CONTROLE DE FLUXO - FOR
     ###                                                         ###
                                                                 ####
                                                                 #####
-
-CONTROLE DE FLUXO - WHILE
-
-
  */
 
 fun main() {
