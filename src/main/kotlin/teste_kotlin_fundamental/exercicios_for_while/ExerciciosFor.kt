@@ -52,11 +52,37 @@ fun main() {
 
     println()
 
-    //ex 4
-    for (y in 1..500) {
-        var num = y + (y - 1)
-        print("$num ")
+    //ex 3.1
+    for (t in 1..50) {
+        if (t % 5 == 0) {
+            continue
+        }
+            print("$t ")
     }
 
     println()
+
+    //ex 3.2
+    for (t in 1..50) {
+        if (t % 5 != 0) {
+            print("$t ")
+        }
+    }
+
+    println()
+
+    //ex 4
+    var num = 0
+    for (y in 1..500) {
+        num = num + y
+    }
+    print(num)
+
+    println()
+
+//    //ex 5
+//    var entrada = readln()
+//    for (ent in entrada) {
+//        print(entrada)
+//    }
 }
