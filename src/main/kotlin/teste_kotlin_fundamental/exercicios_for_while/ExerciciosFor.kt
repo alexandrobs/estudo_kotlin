@@ -80,9 +80,9 @@ fun main() {
 
     println()
 
-//    //ex 5
-//    var entrada = readln()
-//    for (ent in entrada) {
-//        print(entrada)
-//    }
+    //ex 5
+    var entrada = readln().toInt()
+    for (ent in 1..entrada) {
+        if (ent > 0) println("#")
+    }
 }
