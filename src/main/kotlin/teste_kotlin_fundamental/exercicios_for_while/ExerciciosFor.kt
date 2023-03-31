@@ -25,6 +25,15 @@ CONTROLE DE FLUXO - FOR
                                                                 #####
  */
 
+fun ex5(n: Int) {
+    for (i in 1..n) {
+        for (j in 1..i) {
+            print("#")
+        }
+        println()
+    }
+}
+
 fun main() {
 
     //ex 1
@@ -83,6 +92,12 @@ fun main() {
     //ex 5
     var entrada = readln().toInt()
     for (ent in 1..entrada) {
-        if (ent > 0) println("#")
+        for (j in 1..ent) {
+            print("#")
+        }
+        println()
     }
+
+    println()
+    ex5(5)
 }
