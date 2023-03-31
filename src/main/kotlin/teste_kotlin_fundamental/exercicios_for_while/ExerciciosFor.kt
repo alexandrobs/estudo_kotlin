@@ -99,5 +99,5 @@ fun main() {
     }
 
     println()
-    ex5(5)
+    ex5(10)
 }
