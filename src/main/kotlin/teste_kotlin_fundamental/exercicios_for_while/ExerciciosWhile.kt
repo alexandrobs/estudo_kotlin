@@ -50,10 +50,29 @@ fun qtdBaloes() {
     println("cabem $numBaloes baloes na caixa dagua")
 }
 
+fun imprimeFizzBuss() {
+    var num = 0
+    while (num < 50) {
+        num++
+        //poderia usar aqui num 5 % 15 == 0 apenas nesse if
+        if (num % 3 == 0 && num % 5 == 0) {
+            print("FizzBuzz ")
+        } else if (num % 3 == 0) {
+            print("Buzz ")
+        } else if (num % 5 == 0){
+            print("Fizz ")
+        } else {
+            print("$num ")
+        }
+    }
+}
+
 fun main(){
     qtdBaloesEncherPiscina()
 
     qtdBaloes()
+
+    imprimeFizzBuss()
 }
 
 
