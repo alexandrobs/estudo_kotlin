@@ -83,6 +83,16 @@ fun palavraInvertida2(txt: String) {
     }
 }
 
+fun verificaQtdCaracter(txt: String) {
+        if (txt.contains("x")){
+            print("true")
+        } else if (txt.contains("o")){
+            print("true")
+        } else {
+            print("false")
+        }
+}
+
 fun main(){
     qtdBaloesEncherPiscina()
 
@@ -95,6 +105,9 @@ fun main(){
 
     println()
     palavraInvertida2("Meu nome e Julius")
+
+    println()
+    verificaQtdCaracter("ooo")
 }
 
 
