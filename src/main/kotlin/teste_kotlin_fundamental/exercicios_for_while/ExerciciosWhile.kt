@@ -38,8 +38,22 @@ fun qtdBaloesEncherPiscina() {
     }
 }
 
+fun qtdBaloes() {
+    val capCaixa = 2000
+    val capBaloes = 7
+
+    var numBaloes = 0
+    while ((numBaloes * capBaloes) + capBaloes < capCaixa) {
+        numBaloes++
+    }
+
+    println("cabem $numBaloes baloes na caixa dagua")
+}
+
 fun main(){
     qtdBaloesEncherPiscina()
+
+    qtdBaloes()
 }
 
 
