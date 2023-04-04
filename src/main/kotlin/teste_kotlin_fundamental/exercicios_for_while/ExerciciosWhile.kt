@@ -67,12 +67,34 @@ fun imprimeFizzBuss() {
     }
 }
 
+fun palavraInvertida(txt: String) {
+    var i = 0
+    while (txt.length > i) {
+        i++
+    }
+    print(txt.reversed())
+}
+
+fun palavraInvertida2(txt: String) {
+    var i = txt.length - 1
+    while (i >= 0) {
+        print(txt[i])
+        i--
+    }
+}
+
 fun main(){
     qtdBaloesEncherPiscina()
 
     qtdBaloes()
 
     imprimeFizzBuss()
+
+    println()
+    palavraInvertida("Meu nome e Julius")
+
+    println()
+    palavraInvertida2("Meu nome e Julius")
 }
 
 
