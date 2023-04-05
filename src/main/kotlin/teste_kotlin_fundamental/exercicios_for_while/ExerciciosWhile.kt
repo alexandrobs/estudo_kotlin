@@ -109,6 +109,22 @@ fun verificaQtdCaracter(txt: String) {
     }
 }
 
+fun verificaQtdCaracter2(str: String): Boolean {
+    val strLower = str.lowercase()
+    var countX = 0
+    var countO = 0
+    var i = 0
+    while (i < strLower.length) {
+        if (strLower[i] == 'x') {
+            countX++
+        } else if (strLower[i] == 'o') {
+            countO++
+        }
+        i++
+    }
+    return countX == countO && countX != 0
+}
+
 fun main() {
     qtdBaloesEncherPiscina()
 
@@ -123,10 +139,26 @@ fun main() {
     palavraInvertida2("Meu nome e Julius")
 
     println()
+    println()
     verificaQtdCaracter("xxooox")
     verificaQtdCaracter("xxxxo")
     verificaQtdCaracter("bdefghjij")
     verificaQtdCaracter("ooooxzzzzz")
+    println()
+//    println(verificaQtdCaracter2("xxooo"))
+//    println(verificaQtdCaracter2("xxxXo"))
+//    println(verificaQtdCaracter2("bdefghjij"))
+//    println(verificaQtdCaracter2("ooooxzzzzz"))
+    println()
+    verificaQtdCaracter("xxooOX")
+    verificaQtdCaracter("xxxXO")
+    verificaQtdCaracter("bdefGhjij")
+    verificaQtdCaracter("oooOXzzzzz")
+    println()
+    println(verificaQtdCaracter2("xxoOOX"))
+    println(verificaQtdCaracter2("xxxXo"))
+    println(verificaQtdCaracter2("bdefGHjij"))
+    println(verificaQtdCaracter2("oooOXZzzzz"))
 }
 
 
