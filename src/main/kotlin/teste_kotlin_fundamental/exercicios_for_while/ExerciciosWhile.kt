@@ -27,7 +27,7 @@ fun qtdBaloesEncherPiscina() {
     var contador = 0
     var qtdBaloes = 0
 
-    while(qtdBaloes < cxDagua) {
+    while (qtdBaloes < cxDagua) {
         contador++
         qtdBaloes = baloes * contador
         if (qtdBaloes == cxDagua || qtdBaloes > cxDagua) {
@@ -60,7 +60,7 @@ fun imprimeFizzBuss() {
             print("FizzBuzz ")
         } else if (num % 3 == 0) {
             print("Buzz ")
-        } else if (num % 5 == 0){
+        } else if (num % 5 == 0) {
             print("Fizz ")
         } else {
             print("$num ")
@@ -109,7 +109,7 @@ fun verificaQtdCaracter(txt: String) {
     }
 }
 
-fun main(){
+fun main() {
     qtdBaloesEncherPiscina()
 
     qtdBaloes()
