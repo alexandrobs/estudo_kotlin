@@ -16,7 +16,8 @@ Quantos balões cabem na caixa d'água sem que o volume seja excedido?
     Entrada: Meu nome é Julius.         Saída: suiluJ é emon ueM
 
 4. Escreva uma função que recebe uma string, verifica se existe a mesma quantidade de caracteres 'x' e 'o' e retorna
-true ou false. Caso não exista nem 'x' nem 'o', retornar false.
+true ou false.
+Caso não exista nem 'x' nem 'o', retornar false.
     "xxooox" -> true    "xxxxo" -> false    "bdefghjij" -> false    "ooooxzzzzz" -> false
 
 */
@@ -84,13 +85,28 @@ fun palavraInvertida2(txt: String) {
 }
 
 fun verificaQtdCaracter(txt: String) {
-        if (txt.contains("x")){
-            print("true")
-        } else if (txt.contains("o")){
-            print("true")
-        } else {
-            print("false")
+    var i = 0
+    var qtdX = 0
+    var qtdO = 0
+    while (i < txt.length) {
+        if (i < txt.length) {
+            var txtContador = txt[i].toString()
+            if (txtContador.contains("x")) {
+                qtdX++
+            }
+            if (txtContador.contains("o")) {
+                qtdO++
+            }
+            i++
         }
+    }
+    if (qtdX == 0 && qtdO == 0) {
+        println(false)
+    } else if (qtdX == qtdO) {
+        println(true)
+    } else {
+        println(false)
+    }
 }
 
 fun main(){
@@ -107,7 +123,10 @@ fun main(){
     palavraInvertida2("Meu nome e Julius")
 
     println()
-    verificaQtdCaracter("ooo")
+    verificaQtdCaracter("xxooox")
+    verificaQtdCaracter("xxxxo")
+    verificaQtdCaracter("bdefghjij")
+    verificaQtdCaracter("ooooxzzzzz")
 }
 
 
