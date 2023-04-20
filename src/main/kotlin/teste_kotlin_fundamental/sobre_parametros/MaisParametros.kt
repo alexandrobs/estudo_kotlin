@@ -14,6 +14,8 @@ fun main() {
     //ex de uso de valor padrao nos parametros
     "skalslasl".startsWith("sk", false)
 
+    println(salary(7000.0f, 300.0f, 5f))
+
 }
 
 //ex funcao com 3 parametros
@@ -46,5 +48,13 @@ fun <T, J> media(abc: J, vararg notas: T): Float {
         }
     }
     return (soma / notas.size)
+}
+
+/*
+como o valor do segundo parametro esta sendo passado nessa posição, ele não funciona como valor padrão,
+ele se comporta como no caso do vararg, tendo que ser passado como último parametro
+**/
+fun salary(salary: Float, hourlyRate: Float = 200.0f, workedTime: Float): Float {
+    return salary / hourlyRate * workedTime
 }
 
