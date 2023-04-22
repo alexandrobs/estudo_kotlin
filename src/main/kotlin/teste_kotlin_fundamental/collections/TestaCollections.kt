@@ -18,6 +18,13 @@ fun main() {
         "tamarindo" in lista -> println("faca uma torta")
         "banana" in lista -> println("faca uma banana split")
     }
+
+    //using lambda expressions to filter and map collections
+    lista
+        .filter { it.startsWith("m") }
+        .sortedBy { it }
+        .map { it.uppercase() }
+        .forEach{ println(it) }
 }
 
 val lista = listOf("mamao", "maca", "banana")
