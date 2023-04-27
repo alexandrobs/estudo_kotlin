@@ -45,8 +45,11 @@ fun main() {
 
     //não conseguimos acessar doc do construtor assim, primeiro temos que criar uma variavel na classe
     // e passar a varivel do construtor para ela
+    println(pessoa.doc)
+    //pq pessoa2 n ta trazendo o numero de doc e sim o null?
     println(pessoa2.doc)
-    println()
+    println(pessoa2.anoNascimento)
+    println(pessoa2.nome)
 
     var pessoaDefault: PessoaDefault = PessoaDefault()
 
