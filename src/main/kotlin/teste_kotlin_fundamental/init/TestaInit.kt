@@ -24,6 +24,6 @@ class Animal(var especie: String) {
 }
 
 fun main() {
-    //Animal("cachorro").falar()
+    //nimal("cachorro").falar()
     Animal("gato").falar()
 }
