@@ -10,37 +10,46 @@ open class Eletronico(var marca: String) {
 
     private var s: String = ""
     //modificador private
-    private fun ativarCorrente() {}
+    private fun corrente(ativo: Boolean) {}
 
     //protected da visibilidade a class e quem herda ela
     protected fun ativarCorrente2() {}
     fun ligar() {
-        ativarCorrente()
+        corrente(true)
     }
-    fun desligar() {}
+    //funcao precisa ser open para ter override
+    open fun desligar() {
+        corrente(false)
+    }
 }
 
 //a variavel n pode ser var pq a que ela herda ja tem isso
 class Computador(marca: String) : Eletronico(marca) {
-    fun instalarSoftware() {}
-    fun processar() {
-        //como essa class herda Eletronico posso chamar seu metodo protected
-        ativarCorrente2()
+    fun save() {}
+
+    //overload
+    fun save(a: Int) {}
+
+    fun save(a: Int, b: Int) {}
+
+    fun save(a: Float) {}
+
+    fun save(a: Double) {}
+
+    override fun desligar() {
+        save()
+        super.desligar()
     }
+
+//    override fun toString(): String {
+//        println("dfig")
+//        return ""
+//    }
 }
 
 fun main() {
     var c: Computador = Computador("DELL")
     c.ligar()
     c.desligar()
-    println(c.marca)
-    //ativarCorrente so pode ser usado por um eletronico
-    //c.ativarCorrente()
-    //nao e possivel acessar uma var private tb por outra classe
-    //c.s
-    //instanciando uma class privada
-    x()
-    //aqui eu n consigo herdar o metodo protected pq n estou no escopo da class nem de quem herda ela
-    //c.ativarCorrente2()
-
+    c.toString()
 }
