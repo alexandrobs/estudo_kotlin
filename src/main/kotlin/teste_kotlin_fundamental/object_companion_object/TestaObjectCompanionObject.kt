@@ -1,0 +1,1 @@
+package teste_kotlin_fundamental.object_companion_object
