@@ -1,5 +1,11 @@
 package teste_kotlin_fundamental.classes_abstratas
 
+//herança n pode ser multipla em kotlin, mas podemos usar interface
+
+interface Selvagem {
+    fun atacar()
+}
+
 abstract class Mamifero(val nome: String) {
     fun acordar() {
         println("acordar")
