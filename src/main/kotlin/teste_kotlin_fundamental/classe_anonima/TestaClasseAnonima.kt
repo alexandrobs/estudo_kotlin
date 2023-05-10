@@ -8,12 +8,19 @@ class Programa {
     fun salvar(e: Event) {
         println("Abrindo conexões.")
         println("Salvando valores.")
-        println("Sucesso. Conexões fechadas.")
+        println("Sucesso. Conexoes fechadas.")
         e.onSucess()
+    }
+}
+
+class Evento : Event {
+    override fun onSucess() {
+        println("Evento criado")
     }
 }
 
 fun main() {
     val p = Programa()
-    p.salvar()
+    val e = Evento()
+    p.salvar(e)
 }
