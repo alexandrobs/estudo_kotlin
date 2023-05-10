@@ -20,9 +20,16 @@ class Evento : Event {
 }
 
 fun main() {
+    //tendo que criar uma classe Event para passar como parametros
     val p = Programa()
     val e = Evento()
     p.salvar(e)
 
-    //ou
+    //ou usando classe anonima em kotlin
+    val p2 = Programa()
+    p2.salvar(object : Event {
+        override fun onSucess() {
+            println("onSucess")
+        }
+    })
 }
