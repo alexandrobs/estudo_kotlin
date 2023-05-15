@@ -1,6 +1,6 @@
 package teste_kotlin_fundamental.colecoes
 
-//List, Set e Map
+//List (ordenado, aceita valores duplicados), Set (desordenado, nao pode valores duplicados) e Map (chave e valor, usar a mesma chave sobreescreve o valor)
 
 fun main() {
 
@@ -28,7 +28,7 @@ fun main() {
 
     //ou listas vazias
     listOf<Int>()
-    val set3: Set<String> = setOf<String>("ladrao", "bandido", "pilantra", "otario", "otario")
+    val set3: Set<String> = setOf<String>("olho", "boca", "cabeça", "pescoço", "orelha")
     val set4: MutableSet<String> = mutableSetOf<String>()
 
     println(set3)
