@@ -47,4 +47,20 @@ fun main() {
     set4.clear()
     println(set4)
 
+    //Map
+    //chave -> valor, sobrescreve a ultima
+    //mapOf é imutavel
+    val map1 = mapOf<String, String>(Pair("Franca","Paris"), Pair("Alemanha","Berlinz"), Pair("Alemanha", "Berlim"))
+    //mutableMapOf e mutavel
+    val map2 = mutableMapOf<String, String>(Pair("Franca","Paris"), Pair("Alemanha","Berlinz"), Pair("Alemanha", "Berlim"))
+    println(map1)
+    println(map1.entries)
+    println(map1.values)
+    println(map2)
+    map2["Brasil"] = "Brasilia"
+    println(map2)
+    map2.remove("Brasil")
+    println(map2.contains("Brasil"))
+    map2.clear()
+    println(map2)
 }
