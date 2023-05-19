@@ -5,6 +5,15 @@ fun main() {
     println("Tenho dados? ${if(data.any()) "sim" else "nao"}")
     println("Tenho ${data.count()} elementos")
     println(listOf<Int>().any())
+
+    println("Primeira receita: ${data.first().nome}")
+    println("Ultima receita: ${data.last().nome}")
+
+    //isso retorna erro pq lista esta vazia
+    //first and last em listas vazias vai gerar erro, para isso usamos firstOrNull ou lastOrNull
+    //listOf<Int>().first()
+    println(listOf<Int>().firstOrNull())
+    println(listOf<Int>().lastOrNull())
 }
 
 fun geraDados(): List<Receita> {
