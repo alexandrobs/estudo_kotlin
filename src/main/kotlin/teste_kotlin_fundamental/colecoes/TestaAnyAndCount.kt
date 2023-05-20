@@ -39,6 +39,10 @@ fun main() {
         data.count { it.calorias > 200 }
     )
 
+    println(data.take(2))
+
+    println(data.takeLast(2))
+
 }
 
 fun geraDados(): List<Receita> {
@@ -55,11 +59,11 @@ fun geraDados(): List<Receita> {
         Receita("Panqueca", 500),
         Receita("Omelete", 200),
         Receita("Parmegiana", 700),
-        Receita("Sopa de feijão", 300),
+        Receita("Sopa de feijao", 300),
         Receita(
             "Hamburguer", 2000,
             listOf(
-                Ingredientes("Pão", 1),
+                Ingredientes("Pao", 1),
                 Ingredientes("Hamburguer", 3),
                 Ingredientes("Queijo", 1),
                 Ingredientes("Catupiry", 1),
