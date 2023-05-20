@@ -43,6 +43,12 @@ fun main() {
 
     println(data.takeLast(2))
 
+    data.forEach { println(it.nome) }
+
+    println("**************")
+
+    data.filter { it.calorias > 500 }.forEach { println(it.nome) }
+
 }
 
 fun geraDados(): List<Receita> {
