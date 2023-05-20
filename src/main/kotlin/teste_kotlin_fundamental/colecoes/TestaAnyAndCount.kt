@@ -14,6 +14,14 @@ fun main() {
     //listOf<Int>().first()
     println(listOf<Int>().firstOrNull())
     println(listOf<Int>().lastOrNull())
+
+    println(listOf<Int>(1,2,3,4).sum())
+    println(listOf(1.5,1.9,6.8).sum())
+    println(listOf<Int>().sum())
+
+    println(data.sumOf { it.calorias })
+
+
 }
 
 fun geraDados(): List<Receita> {
