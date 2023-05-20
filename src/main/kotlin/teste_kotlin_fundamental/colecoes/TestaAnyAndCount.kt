@@ -21,6 +21,17 @@ fun main() {
 
     println(data.sumOf { it.calorias })
 
+    println(data.filter { it.nome == "Lasanha" })
+
+    println(data.filter { it.calorias > 500 })
+
+    println(
+        data.filter { it.calorias < 500 }.any()
+    )
+
+    println(
+        data.filter { it.calorias < 100 }.any()
+    )
 
 }
 
@@ -32,7 +43,7 @@ fun geraDados(): List<Receita> {
                 Ingredientes("Presunto", 5),
                 Ingredientes("Queijo", 5),
                 Ingredientes("Molho de tomate", 1),
-                Ingredientes("Manjericão", 10)
+                Ingredientes("Manjericao", 10)
             )
         ),
         Receita("Panqueca", 500),
