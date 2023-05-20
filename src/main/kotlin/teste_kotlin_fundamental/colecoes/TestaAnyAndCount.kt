@@ -19,6 +19,8 @@ fun main() {
     println(listOf(1.5,1.9,6.8).sum())
     println(listOf<Int>().sum())
 
+    //filter e uso dos predicados, filtros aplicados, o uso das {}
+
     println(data.sumOf { it.calorias })
 
     println(data.filter { it.nome == "Lasanha" })
@@ -31,6 +33,10 @@ fun main() {
 
     println(
         data.any { it.calorias < 100 },
+    )
+
+    println(
+        data.count { it.calorias > 200 }
     )
 
 }
