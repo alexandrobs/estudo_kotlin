@@ -30,7 +30,7 @@ fun main() {
     )
 
     println(
-        data.filter { it.calorias < 100 }.any()
+        data.any { it.calorias < 100 },
     )
 
 }
