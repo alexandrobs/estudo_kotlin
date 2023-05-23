@@ -71,6 +71,9 @@ fun main() {
 
     println(data.map { ReceitaNIngredientes(it.nome, it.ingredientes.count()) })
 
+    println(listOf(1, 2, 4).average())
+
+    println(data.map { it.calorias }.average())
 }
 
 fun geraDados(): List<Receita> {
