@@ -39,7 +39,7 @@ fun main() {
         data.count { it.calorias > 200 }
     )
 
-    println(data.take(2))
+    println("take " + data.take(2))
 
     println(data.takeLast(2))
 
