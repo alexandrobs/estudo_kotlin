@@ -49,6 +49,17 @@ fun main() {
 
     data.filter { it.calorias > 500 }.forEach { println(it.nome) }
 
+    println(data.maxOf { it.calorias })
+
+    println(data.minOf { it.calorias })
+
+    println(listOf(1, 4, 9).maxOf { it })
+
+    println(listOf(1, 4, 9).maxOrNull())
+
+    println(listOf(1, 4, 9).minOrNull())
+
+    println(data.maxByOrNull { it.calorias })
 }
 
 fun geraDados(): List<Receita> {
