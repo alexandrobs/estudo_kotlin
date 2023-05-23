@@ -60,6 +60,17 @@ fun main() {
     println(listOf(1, 4, 9).minOrNull())
 
     println(data.maxByOrNull { it.calorias })
+
+    println(data.map { it.nome })
+
+    println(data.map { it.ingredientes })
+
+    println(data.map { it.calorias })
+
+    println(data.map { it.calorias }.sum())
+
+    println(data.map { ReceitaNIngredientes(it.nome, it.ingredientes.count()) })
+
 }
 
 fun geraDados(): List<Receita> {
@@ -95,3 +106,5 @@ fun geraDados(): List<Receita> {
 data class Receita(val nome: String, val calorias: Int, val ingredientes: List<Ingredientes> = listOf())
 
 data class Ingredientes(val nome: String, val quantidade: Int)
+
+data class ReceitaNIngredientes(val nome: String, val nIngrediente: Int)
