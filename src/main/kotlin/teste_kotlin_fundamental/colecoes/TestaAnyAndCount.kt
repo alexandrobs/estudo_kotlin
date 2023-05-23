@@ -74,6 +74,27 @@ fun main() {
     println(listOf(1, 2, 4).average())
 
     println(data.map { it.calorias }.average())
+
+    val lst = listOf(1, 2, 3, 4, 5, 1, 1, 2, 34, 53)
+
+    val lstTxt = listOf("a","b","c","s","a")
+
+    println(lst.distinct())
+
+    println(lstTxt.distinct())
+
+    println(data.distinctBy { it.nome })
+
+    println(data.distinctBy { it })
+
+    println(lst.sorted())
+
+    println(lst.sortedDescending())
+
+    println(lst.reversed())
+
+    println(lst.sorted().reversed())
+
 }
 
 fun geraDados(): List<Receita> {
@@ -88,6 +109,7 @@ fun geraDados(): List<Receita> {
             )
         ),
         Receita("Panqueca", 500),
+        Receita("Panqueca", 800),
         Receita("Omelete", 200),
         Receita("Parmegiana", 700),
         Receita("Sopa de feijao", 300),
