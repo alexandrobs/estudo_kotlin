@@ -10,11 +10,13 @@ class Console {
             if (info != null && info != "") {
                 retorno = info.toIntOrNull()
 
-                if (retorno == null) {
+                if (retorno == null || retorno < 0) {
                     println("Valor invalido!!")
                 }
+            } else {
+                println("Valor invalido!!")
             }
-        } while (retorno == null)
+        } while (retorno == null || retorno < 0)
         return 0
     }
 }
