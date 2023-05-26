@@ -1,6 +1,10 @@
 package teste_kotlin_fundamental.portaria.control
 
+import teste_kotlin_fundamental.portaria.business.ConviteBusiness
+
 class Portaria {
+
+    var conviteBusiness: ConviteBusiness()
 
     init {
         println("Portaria inicializada")
@@ -14,7 +18,15 @@ class Portaria {
         }
 
         val convite = Console.readString("Qual seu convite? ")
-        println(convite)
+        if (!conviteBusiness.tipoValido(convite)) {
+            return "Convite invalido"
+        }
+
+        val codigo = Console.readString("Qual o código convite? ")
+        if (!conviteBusiness.codigoValido(codigo, convite)) {
+            return "Codigo invalido"
+        }
+
         return "TODO!"
     }
 
@@ -30,12 +42,12 @@ class Portaria {
         print("Qual é o tipo de convite? ")
         var tipoConvite = readLine()
         if (tipoConvite != null && tipoConvite != "") {
-            tipoConvite = tipoConvite.lowercase()
+            /*tipoConvite = tipoConvite.lowercase()
             //validacao tipo convite
             if (tipoConvite != "comum" && tipoConvite != "premium" && tipoConvite != "luxo") {
                 println("Negado seu convite")
                 return
-            }
+            }*/
             print("Qual o código convite?")
             var codigo = readLine()
             if (codigo != null && codigo != "") {
