@@ -1,16 +1,21 @@
-package teste_kotlin_fundamental.portaria
+package teste_kotlin_fundamental.portaria.control
 
 class Portaria {
 
-    fun controle() {
+    init {
+        println("Portaria inicializada")
+        println(controle())
+    }
+
+    private fun controle(): String {
         val idade = Console.readInt("Qual sua idade? ")
         if (idade < 18) {
-            println("Negado menor de idade")
-            return
+            return "Negado menor de idade"
         }
 
         val convite = Console.readString("Qual seu convite? ")
         println(convite)
+        return "TODO!"
     }
 
     fun portaria() {

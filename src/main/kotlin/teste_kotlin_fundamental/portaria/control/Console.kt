@@ -1,4 +1,4 @@
-package teste_kotlin_fundamental.portaria
+package teste_kotlin_fundamental.portaria.control
 
 class Console private constructor() {
     companion object {
