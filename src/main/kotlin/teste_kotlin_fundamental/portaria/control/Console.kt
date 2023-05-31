@@ -11,14 +11,14 @@ class Console private constructor() {
                 if (info != null && info != "") {
                     retorno = info.toIntOrNull()
 
-                    if (retorno == null || retorno < 0) {
+                    if (retorno == null || retorno <= 0) {
                         println("Valor invalido!!")
                     }
                 } else {
                     println("Valor invalido!!")
                 }
-            } while (retorno == null || retorno < 0)
-            return 0
+            } while (retorno == null || retorno <= 0)
+            return retorno
         }
 
         fun readString(msg: String): String {

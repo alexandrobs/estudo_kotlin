@@ -13,8 +13,9 @@ class Portaria {
     }
 
     private fun controle(): String {
-        val idade = Console.readInt("Qual sua idade? ")
-        if (idade < 18) {
+        val idadeCliente = Console.readInt("Qual sua idade? ")
+
+        if (idadeCliente < 18) {
             return "Negado menor de idade"
         }
 
@@ -23,13 +24,13 @@ class Portaria {
             return "Convite invalido"
         }
 
-        val codigo = Console.readString("Qual o código convite? ")
+        val codigo = Console.readString("Qual o codigo convite? ")
         val convite = Convite(tipoConvite,  codigo)
         if (!conviteBusiness.codigoValido(convite)) {
             return "Codigo invalido"
         }
 
-        return "TODO!"
+        return "Welcome!"
     }
 
     fun portaria() {
