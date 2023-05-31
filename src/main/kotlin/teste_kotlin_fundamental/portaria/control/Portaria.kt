@@ -1,6 +1,7 @@
 package teste_kotlin_fundamental.portaria.control
 
 import teste_kotlin_fundamental.portaria.business.ConviteBusiness
+import teste_kotlin_fundamental.portaria.entity.Convite
 
 class Portaria {
 
@@ -17,13 +18,14 @@ class Portaria {
             return "Negado menor de idade"
         }
 
-        val convite = Console.readString("Qual seu convite? ")
-        if (!conviteBusiness.tipoValido(convite)) {
+        val tipoConvite = Console.readString("Qual seu convite? ")
+        if (!conviteBusiness.tipoValido(tipoConvite)) {
             return "Convite invalido"
         }
 
         val codigo = Console.readString("Qual o código convite? ")
-        if (!conviteBusiness.codigoValido(codigo, convite)) {
+        val convite = Convite(tipoConvite,  codigo)
+        if (!conviteBusiness.codigoValido(convite)) {
             return "Codigo invalido"
         }
 
