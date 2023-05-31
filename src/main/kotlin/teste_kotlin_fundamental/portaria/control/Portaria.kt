@@ -5,7 +5,7 @@ import teste_kotlin_fundamental.portaria.entity.Convite
 
 class Portaria {
 
-    var conviteBusiness: ConviteBusiness()
+    private var conviteBusiness = ConviteBusiness()
 
     init {
         println("Portaria inicializada")
