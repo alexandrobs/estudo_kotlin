@@ -11,7 +11,6 @@ public class ExemploJava {
         valor++;
         value++;
     }
-
     public static void main(String[] args) {
         new ExemploJava();
         new ExemploJava();
