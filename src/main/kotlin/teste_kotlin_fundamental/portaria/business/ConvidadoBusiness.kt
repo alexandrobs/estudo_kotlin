@@ -2,7 +2,7 @@ package teste_kotlin_fundamental.portaria.business
 
 import teste_kotlin_fundamental.portaria.entity.Convite
 
-class ConviteBusiness {
+class ConvidadoBusiness {
     fun tipoValido(tipo: String): Boolean = tipo == "comum" || tipo == "premium" || tipo == "luxo"
 
 //    fun codigoValido(codigo: String, tipo: String): Boolean {

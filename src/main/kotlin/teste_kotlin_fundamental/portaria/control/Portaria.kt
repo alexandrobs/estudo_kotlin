@@ -1,11 +1,11 @@
 package teste_kotlin_fundamental.portaria.control
 
-import teste_kotlin_fundamental.portaria.business.ConviteBusiness
+import teste_kotlin_fundamental.portaria.business.ConvidadoBusiness
 import teste_kotlin_fundamental.portaria.entity.Convite
 
 class Portaria {
 
-    private var conviteBusiness = ConviteBusiness()
+    private var convidadoBusiness = ConvidadoBusiness()
 
     init {
         println("Portaria inicializada")
@@ -20,13 +20,13 @@ class Portaria {
         }
 
         val tipoConvite = Console.readString("Qual seu convite? ")
-        if (!conviteBusiness.tipoValido(tipoConvite)) {
+        if (!convidadoBusiness.tipoValido(tipoConvite)) {
             return "Convite invalido"
         }
 
         val codigo = Console.readString("Qual o codigo convite? ")
         val convite = Convite(tipoConvite,  codigo)
-        if (!conviteBusiness.codigoValido(convite)) {
+        if (!convidadoBusiness.codigoValido(convite)) {
             return "Codigo invalido"
         }
 
